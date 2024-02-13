@@ -2,7 +2,7 @@
 
 My Article :- https://datatoinfolabs.com/call-center-data-analysis-in-power-bi-dashboard-project/
 
-### hrough this project you will get an understanding of how to create a advance Dashboard in Power BI for Call Center Data and also collect and analyzing call data to help businesses put their customers first.
+### Through this project you will get an understanding of how to create a advance Dashboard in Power BI for Call Center Data and also collect and analyzing call data to help businesses put their customers first.
 
 # Flow of the Project:
 
