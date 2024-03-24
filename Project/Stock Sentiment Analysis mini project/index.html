@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Sentiment Analysis</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<style>
+body  {
+  margin-top : 0px;
+  background-color : rgb(125, 6, 6);
+  color : #f8f6f4;
+  width : 100%;
+  transform : scale(90%);
+  font-family : arial, helvatica, sans-serif;
+}
+
+.row{
+	margin-top : 0px;
+	padding : 0px;
+	margin-bottom : 20px;
+}
+
+.result {
+    margin: auto;
+    width: 75%;
+}
+
+.column {
+	float : left;
+	width : 100%;
+}
+
+.button{
+	text-align : center;
+}
+
+.button-submit {
+	background-color:#ff9933;
+	padding : 15px 3px;
+	margin-top : 20px;
+	border : none;
+	color : black;
+}
+
+.button-submit:hover {
+	background-color : #008cba;
+	color : white;
+}
+
+.button-submit:active {
+	background-color : #4caf55;
+	color : white;
+}
+
+</style>
+
+
+<body>
+ <div class="row">
+	<h1 style="margin: auto; width: 35%; padding: 0.1%; text-align: center;">Stock Sentiment Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+		<div class="column">
+		<fieldset style="float:center; height:1760px; margin-right:10px;">
+			<legend><b></b></legend>
+			<p><b>Headline 1 :</b><br>
+			<input type="text" name="h1" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 2 :</b><br>
+			<input type="text" name="h2" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 3 :</b><br>
+			<input type="text" name="h3" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 4 :</b><br>
+			<input type="text" name="h4" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 5 :</b><br>
+			<input type="text" name="h5" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 6 :</b><br>
+			<input type="text" name="h6" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 7 :</b><br>
+			<input type="text" name="h7" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 8 :</b><br>
+			<input type="text" name="h8" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 9 :</b><br>
+			<input type="text" name="h9" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 10 :</b><br>
+			<input type="text" name="h10" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 11 :</b><br>
+			<input type="text" name="h11" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 12 :</b><br>
+			<input type="text" name="h12" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 13 :</b><br>
+			<input type="text" name="h13" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 14 :</b><br>
+			<input type="text" name="h14" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 15 :</b><br>
+			<input type="text" name="h15" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 16 :</b><br>
+			<input type="text" name="h16" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 17 :</b><br>
+			<input type="text" name="h17" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 18 :</b><br>
+			<input type="text" name="h18" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 19 :</b><br>
+			<input type="text" name="h19" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 20 :</b><br>
+			<input type="text" name="h20" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 21 :</b><br>
+			<input type="text" name="h21" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 22 :</b><br>
+			<input type="text" name="h22" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 23 :</b><br>
+			<input type="text" name="h23" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 24 :</b><br>
+			<input type="text" name="h24" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+			
+			<p><b>Headline 25 :</b><br>
+			<input type="text" name="h25" placeholder="" required="required" style="width:99%; height:30px;"/></p>
+					
+		</fieldset>
+		</div>
+		
+		<div class="button" >
+			<button type="submit" class="button-submit" style="cursor:pointer;" hover="background-color:blue;"><b>PREDICT STOCK</b></button>
+		</div>
+    </form>
+	<br>
+	<div class="result" align="center">
+		<div class="result" align="center">
+		{% if prediction==1 %}
+			<h2><p style="padding: 0.3%; color:rgb(65, 220, 65)"><b>Stock Price is likely to Increase!</b></p></h2>
+		{% elif prediction==0 %}
+			<h2><p style="padding: 0.3%; color:rgb(65, 220, 65)"><b>Stock Price is likely to Decrease!</b></p></h2>
+		{% endif %}	
+	</div>	
+	</div>
+ </div>
+
+
+</body>
+</html>
