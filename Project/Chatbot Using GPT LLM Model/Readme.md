@@ -7,5 +7,9 @@
 
 ## From Transformers, we are using two modules such as GPT2Tokenizer, GPT2LMHeadModel.
 
-G:\New_chatbot_project1\Chatbot home page.png
-G:\New_chatbot_project1\Chatbot chats.png
+
+![Chatbot home page](https://github.com/akshaytekam/Data-To-Info_Labs/assets/42464327/30583aaa-789f-4db4-96d9-b7090375a381)
+
+
+![Chatbot chats](https://github.com/akshaytekam/Data-To-Info_Labs/assets/42464327/01b2ed85-5464-4c01-9c87-e37a77374578)
+
